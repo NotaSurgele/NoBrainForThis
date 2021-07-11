@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "NoBrainForThis",
+  "description": "An extension to generate and retrieve complicated password",
+  "version": "1.0",
+
+  "action": {
+    "default_icon": {
+        "16": "icons/mental-health_16px.png",
+        "32": "icons/mental-health_32px.png",
+        "128": "icons/mental-health_128px.png"
+    }
+  },
+  "icons": {
+    "16": "icons/mental-health_16px.png",
+    "32": "icons/mental-health_32px.png",
+    "128": "icons/mental-health_128px.png"
+  }
+}
