@@ -5,10 +5,19 @@
   "version": "1.0",
 
   "action": {
+    "default_popup": "index.html",
     "default_icon": {
         "16": "icons/mental-health_16px.png",
         "32": "icons/mental-health_32px.png",
         "128": "icons/mental-health_128px.png"
+    }
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      }
     }
   },
   "icons": {
