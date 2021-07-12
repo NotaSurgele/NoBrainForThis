@@ -20,9 +20,16 @@
       }
     }
   },
+  "background.service_worker": {
+    "scripts": ["app.js"],
+    "persistent": false
+  },
   "icons": {
     "16": "icons/mental-health_16px.png",
     "32": "icons/mental-health_32px.png",
     "128": "icons/mental-health_128px.png"
-  }
+  },
+  "permissions": [
+    "tabs"
+  ]
 }
