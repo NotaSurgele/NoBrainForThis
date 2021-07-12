@@ -31,7 +31,7 @@ function checkIfPasswordExist() {
             if (str.indexOf(localStorage.getItem("currentURL")) != -1) {
                 var passwd = str.split('§');
                 console.log(str);
-                console.log("Your password for this site is: " + passwd[1]);
+                document.getElementById("password").innerText = "Your password for this current site is: " + passwd[1];
                 document.getElementById("refresh").innerHTML = `<button id="ref"> refresh </button>`
                 document.getElementById("refresh").addEventListener("click", function() {
                     document.location.reload();
@@ -83,7 +83,7 @@ function showGeneratedPassword()
         if (list == null)
             list = [];
         var currentURL = localStorage.getItem("currentURL");
-        list.push(JSON.stringify(currentURL + "§" + password));
+        list.push(JSON.stringify(currentURL + "§" + document.getElementById("password").innerText));
         localStorage.setItem("stockedData", JSON.stringify(list));
         window.location.reload();
     });
