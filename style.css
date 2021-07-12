@@ -2,3 +2,7 @@ html {
     min-width: 30em;
     min-height: 50em;
 }
+
+#password {
+    color: red;
+}
