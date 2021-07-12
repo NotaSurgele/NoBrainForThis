@@ -1,13 +1,18 @@
 var createPass = `<button id="generatedPassword"> Generate password </button>`;
 
 chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
-function(tabs) {
-    getcurrentURL(tabs);
+    function(tabs) {
+        getcurrentURL(tabs);
 });
 
 function getcurrentURL(tabs)
 {
     let url = tabs[0].url;
+
+    if (localStorage.getItem("currentURL") != null || localStorage.getItem("currentURL") != undefined) {
+        if (url != localStorage.getItem("currentURL"))
+            window.location.reload();
+    }
     localStorage.setItem("currentURL", url);
 }
 
@@ -92,10 +97,6 @@ function generatePassword() {
 function main() {
     checkIfPasswordExist();
     generatePassword();
-}
-
-if (document.onvisibilitychange) {
-    window.location.reload();
 }
 
 document.onload = main();
