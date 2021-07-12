@@ -28,7 +28,6 @@ function algorithm() {
     for (let i = 0; i != 24; i++) {
         if (i < 6) {
             let value = Math.floor(Math.random() * 26);
-            console.log(letterLower[value]);
             passWord += letterLower[value];
         } else if (i >= 6 && i < 12) {
             let value = Math.floor(Math.random() * 26);
@@ -41,13 +40,19 @@ function algorithm() {
             passWord += specialChar[value];
         }
     }
+    console.log(passWord);
     return passWord;
 }
 
+function showGeneratedPassword()
+{
+    var password = algorithm();
+    console.log("password = " + password);
+    document.getElementById('password').innerText = password;
+}
+
 function generatePassword() {
-    document.getElementById('generatedPassword').addEventListener('click', function() {
-        console.log(algorithm());
-    });
+    document.getElementById('generatedPassword').addEventListener('click', showGeneratedPassword);
 }
 
 function main() {
